@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
 jobs:
-  build:
+  build-mac:
     runs-on: macos-latest
     steps:
       - name: checkout
@@ -23,8 +23,7 @@ jobs:
       - name: build
         run: yarn build
 
-jobs:
-  build:
+  build-ubuntu:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -44,8 +43,7 @@ jobs:
       - name: build
         run: yarn build
 
-jobs:
-  build:
+  build-windows:
     runs-on: window-latest
     steps:
       - name: checkout
